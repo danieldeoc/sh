@@ -1,0 +1,117 @@
+/* ############################# */
+/* CORES */
+$greenPrimary: #1ca82c;
+$GreenSecondary: #25db39;
+$DarkGreen: #0c1a0e;
+$GreenTerciary: #0b4211;
+$GreenQuaternary:#14751f;
+$Grey0: #666;
+$Grey1: #bababa;
+$Grey2: #999;
+$Grey3: #CECECE;
+$white: #fff;
+
+
+$borderRadius1: 8px;
+$borderRadius2: 16px;
+$borderRadius3: 24px;
+
+$boxShadow: 0 3px 4px 4px rgba(0,0,0,0.04);
+$boxShadowInset: inset 3px 3px 4px 4px rgba(0,0,0,0.1);
+
+$spaceXs: 4px;
+$spaceSm: 8px;
+$spaceMd: 16px;
+$spaceLg: 24px;
+$spaceXl: 32px;
+$spaceXXl: 40px;
+
+
+
+/* ############################# */
+/* INFRASTRUCTURE */
+body{
+  background: url("images/ui/bg.svg") bottom center repeat-x #fafafa;
+  padding-bottom: 4rem;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{font-family: 'Lato', sans-serif; margin: 0; outline: none; color: $Grey0;}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container{ max-width: 1200px; margin: 2rem auto;}
+
+.container.desktop{ max-width: 1180px;}
+.container.tablet{ max-width: 750px;}
+.container.phone{ max-width: 450px;}
+.box{
+  background-color: $white;
+  border-radius: $borderRadius1;
+  box-shadow: $boxShadow;
+}
+
+
+/* PADBOX */
+.padBox.small{ padding: $spaceSm;}
+.padBox.medium{ padding: $spaceMd;}
+.padBox.large{ padding: $spaceLg;}
+
+
+
+/* ##################################################### */
+/* TEXT ELEMENTS */
+.regularTitle{ 
+  color: $greenPrimary;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  margin: 0 auto $spaceMd;
+}
+
+/* ##################################################### */
+/* BUTTON ELEMENTS */
+.btn{
+    display: block;
+    padding: $spaceMd $spaceLg;
+    color: #fff;
+    background-color: $greenPrimary;
+    cursor: pointer;
+    box-shadow: $boxShadow;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border:none;
+    border-radius: $borderRadius1;
+    width: 100%;
+}
+.btn:hover{ background-color: $GreenSecondary; box-shadow: none;}
+.btn:active{ background-color: $GreenQuaternary; box-shadow: $boxShadowInset;}
+
+/* ##################################################### */
+/* INPUT ELEMENTS */
+.inputContainer{
+  border-radius: $borderRadius1;
+  border: 1px solid $Grey1;
+  display: block;
+  margin: 0 auto $spaceMd;
+}
+.inputContainer label{
+  padding: $spaceSm $spaceMd;
+  color: $greenPrimary;
+  font-size: 0.8rem;
+  display: block;
+  font-weight: bold;
+}
+.inputContainer input{ 
+  border: none;
+  padding: 0  $spaceMd $spaceSm;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: none;
+  display: block;
+  width: 100%;
+}
+.inputContainer input:focus{ color: #1ca82c;}
