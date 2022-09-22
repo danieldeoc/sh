@@ -19,14 +19,30 @@ function SignInPage(){
     function createAccount(e){
         e.preventDefault();
         const userData = {
-            hote: hotelName.current.value,
-            name: userName.current.value,
-            email: userEmail.current.value,
-            pass: userPass.current.value
+            username: userName.current.value,
+            usermail: userEmail.current.value,
+            userpass: userPass.current.value,
+            hotelname: hotelName.current.value,
+            date: "2022-09-22",
+            userhash: "asdasdsad" 
         }
+
+        
+        console.log(JSON.stringify(userData))
+        fetch("http://localhost:8000/", {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body:JSON.stringify(userData)
+        }).then( (resp) => resp.json() )
+        .then( function(response) {
+            console.log(response)
+        }).catch( (err) => console.log(err) );
         
         
-        console.log(userData)
+
     }
 
 
