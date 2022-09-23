@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import axios from "axios";
 import Box from "../../components/interface/box";
 import Container from "../../components/interface/container";
 import InputText from "../../components/forms/inputText";
@@ -16,7 +17,7 @@ function SignInPage(){
 
     
     
-    function createAccount(e){
+    async function createAccount(e){
         e.preventDefault();
         const userData = {
             username: userName.current.value,
@@ -28,18 +29,27 @@ function SignInPage(){
         }
 
         
-        console.log(JSON.stringify(userData))
-        fetch("http://localhost:8000/", {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body:JSON.stringify(userData)
-        }).then( (resp) => resp.json() )
-        .then( function(response) {
-            console.log(response)
-        }).catch( (err) => console.log(err) );
+        await axios.post("http://localhost:8000/users/", userData)
+            .then(function(response){
+                console.log(response)
+                console.log("addUser");
+            })
+            .catch( (err) => console.log(err) );
+        
+
+        
+        // console.log(JSON.stringify(userData))
+        // fetch("http://localhost:8000/", {
+        //     method: 'POST',
+        //     mode: 'cors',
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     },
+        //     body:JSON.stringify(userData)
+        // }).then( (resp) => resp.json() )
+        // .then( function(response) {
+        //     console.log(response)
+        // }).catch( (err) => console.log(err) );
         
         
 
