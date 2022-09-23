@@ -36,8 +36,12 @@ body{
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
+  padding: 2rem 0;
 }
-*{font-family: 'Lato', sans-serif; margin: 0; outline: none; color: $Grey0;}
+*{font-family: 'Lato', sans-serif; margin: 0; outline: none; color: $Grey0;
+  list-style: none;}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -60,6 +64,23 @@ code {
 .padBox.medium{ padding: $spaceMd;}
 .padBox.large{ padding: $spaceLg;}
 
+
+/* ############################# */
+/* HEADER */
+header{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    padding: $spaceMd;
+    background: $white;
+    box-shadow: $boxShadow;
+    box-sizing: border-box;
+
+}
+header h1{ float: left;}
+header nav{ float: right;}
+header nav li{ display: inline-block;}
+header nav li a{ color: $greenPrimary; display: block; padding: $spaceMd; text-decoration: none;}
 
 
 /* ##################################################### */
