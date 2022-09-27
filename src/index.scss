@@ -108,8 +108,8 @@ header nav li a{ color: $greenPrimary; display: block; padding: $spaceMd; text-d
     border-radius: $borderRadius1;
     width: 100%;
 }
-.btn:hover{ background-color: $GreenSecondary; box-shadow: none;}
-.btn:active{ background-color: $GreenQuaternary; box-shadow: $boxShadowInset;}
+.btn:hover, .btn:focus{ background-color: $GreenSecondary; box-shadow: none; color: $white;}
+.btn:active{ background-color: $GreenQuaternary; box-shadow: $boxShadowInset; color: $white;}
 
 /* ##################################################### */
 /* INPUT ELEMENTS */
@@ -136,3 +136,27 @@ header nav li a{ color: $greenPrimary; display: block; padding: $spaceMd; text-d
   width: 100%;
 }
 .inputContainer input:focus{ color: #1ca82c;}
+
+/* ##################################################### */
+/* HOTEL MENU */
+.relativeMenu{
+  position: relative;
+}
+.menuHotel{ 
+  background-color: #fafafa; 
+  position: absolute; left: 0; top: 0; bottom: 0;
+  -webkit-border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px;
+  padding: $spaceMd;
+  width: 100%;
+  box-sizing: border-box;
+}
+.menuHotel a{ display: block; color: gray;
+  text-decoration: none;
+  padding:$spaceSm ;}
+
+/* ##################################################### */
+/* LoginPage */
+.passWordResetBox{ padding: 0 0 $spaceMd;
+  font-size: 0.9rem;}
+

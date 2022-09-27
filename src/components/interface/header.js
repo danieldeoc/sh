@@ -10,8 +10,12 @@ function Header(){
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
-                    </li><li>
-                        <Link to="/signIn">Sign In</Link>
+                    </li>
+                    <li>
+                        <Link to="/login">Sign In</Link>
+                    </li>
+                    <li>
+                        <Link to="/signIn">Sign Up</Link>
                     </li>
                 </ul>
             </nav>
